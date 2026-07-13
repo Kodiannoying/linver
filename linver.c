@@ -7,12 +7,11 @@ int main() {
 	FILE *file = fopen("/etc/osinfo", "r");
 	char c;
 	char line[256];
-
 	if (!file) {
 		printf("linver /etc/osinfo not found!\n");
 		perror("Error");
 	} else {
-		printf("== Linver v1 ==\n");
+		printf("== Linver 1.0 ==\n");
 		printf("\n");
 		while (fgets(line, sizeof(line), file)) {
 			char key[128];
@@ -23,7 +22,7 @@ int main() {
 			}
 		}
 		printf("\n");
-		printf("== Linver v1 ==\n");
+		printf("== Linver 1.0 ==\n");
 		fclose(file);
 	}
 	return 0;
